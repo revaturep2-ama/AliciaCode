@@ -1,0 +1,59 @@
+*
+{
+    border: border-box;
+}
+
+html
+{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: oldlace;
+}
+
+a
+{
+    text-decoration: black;
+    color: red;
+    padding: 5px 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: inherit;
+    font-display: block;
+    font-size: 200%;
+}
+
+nav
+{
+    float: left;
+    display: block;
+    text-align: center;
+    
+}
+
+image.pair
+{
+    float: left;
+    place-content: 10px 0px 0px;
+    
+}
+
+header
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    size: 40px;
+}
+
+p.intro
+{
+    border-block-end-color: black;
+}
+
+div.characters
+{
+   line-break: auto;
+    columns: 6;
+}

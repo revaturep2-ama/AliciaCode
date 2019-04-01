@@ -1,0 +1,35 @@
+     @import  'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+
+    *
+    {
+         box-sizing: border-box;
+    }
+
+    html
+    {
+        background-color: olivedrab;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        align-content: center;
+    }
+
+     header
+     {
+        background-color: red;
+        color: goldenrod;
+        
+     }
+
+     nav
+     {
+        background-color: brown;
+     }
+
+     button
+     {
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         text-align: center;
+         text-shadow: 1px 1px 1px #000000;
+         background-color: olive;
+         color: wheat;
+
+     }

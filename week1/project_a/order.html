@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>pie time</title>
+
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <div class ="container-fluid">
+
+        <header class = "row">
+
+            <h1>Pie Time Pizza</h1>
+
+            <nav class = "navbar navbar-light bg-light">
+
+                <span><a href ="home.html">Home</a></span>
+                <span><a href ="login.html">Sign In</a></span>
+                <span><a href ="hours.html">Hours</a></span>
+                <span><a href ="order.html">Gimme Pizza!</a></span>
+
+            </nav>
+
+        </header>
+
+        <main>
+
+            <h1>Order Up!</h1>
+
+            <label for ="amount">Choose number of pizzas:</label>
+            <input list = "number-of-pizzas" id = "amount" name = "amount" />
+
+            <datalist id = "number-of-pizzas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+            </datalist>
+
+            <p>Choose pie size:</p>
+
+            <div class = "pieSize">
+               
+                <input type = "radio" id = "small" name = "size" value = "small" checked>
+                
+                <label for "small">Small</label>
+
+           </div>
+
+           <div class = "pieSize">
+               
+                <input type = "radio" id = "medium" name = "size" value = "medium">
+                
+                <label for "medium">Medium</label>
+
+           </div>
+
+           <div class = "pieSize">
+               
+                <input type = "radio" id = "large" name = "size" value = "large">
+                
+                <label for "large">Large</label>
+
+           </div>
+
+           <p>Choose Toppings:</p>
+
+           <div class = "container-fluid">
+            
+            <div class = "row">
+            
+                <div class = "col">
+
+                <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+                <label for "tomatoSauce">Tomato Sauce</label>
+
+                </div>
+
+           <div class = "col">
+
+            <input type = "checkbox" id = "whiteSauce" name = "white sauce">
+            <label for "whiteSauce">Alfredo Sauce</label>
+    
+           </div>
+
+           <div class = "w-100"></div>
+
+           <div class = "col">
+            <input type = "checkbox" id = "greenSauce" name = "green sauce">
+            <label for "greenSauce">Pesto Sauce</label>
+
+           </div>
+
+           <div class = "col">
+
+            <input type = "checkbox" id = "bbqSauce" name = "bbq sauce">
+            <label for "bbqSauce">Barbecue Sauce</label>
+    
+            </div>
+
+            <div class = "w-100"></div>
+            
+            <div class = "col">
+
+            <input type = "checkbox" id = "cheese" name = "cheese">
+            <label for "cheese">Cheese</label>
+        
+            </div>
+                   
+            <div class = "col">
+
+            <input type = "checkbox" id = "pepperoni" name = "pepperoni">
+            <label for "pepperroni">Pepperoni</label>
+            
+            </div>
+
+            <div class = "w-100"></div>
+                       
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                
+            </div>
+                           
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                    
+            </div>
+
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                            
+            </div>
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                            
+            </div>
+            
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+            <label for "tomatoSauce">Tomato Sauce</label>
+                            
+            </div>
+
+         </div>
+        </div>
+
+        <button class = "orderFinish" type = "button">
+                Order
+            </button>
+
+        </main>
+
+        <footer class = "row">
+
+            <nav></nav>
+
+            <small></small>
+
+        </footer>
+
+    </div>
+
+    <script src = "js/app.js" type = "module"></script>
+
+    </body>
+
+</html>

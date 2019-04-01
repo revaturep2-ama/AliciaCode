@@ -1,0 +1,154 @@
+*
+{
+    box-sizing: border-box;
+}
+html
+{
+    background-color: #102b6a;
+    width: 100%;
+} 
+
+header
+{
+    color: purple;
+    background-color: olivedrab;
+}
+
+nav a 
+{
+    color: palevioletred;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+span{color: greenyellow;}
+
+body, html 
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 20px;
+    width: 100%;
+}
+
+body
+{
+    font-size: 12px;
+}
+
+footer
+{
+    background-color: olivedrab;
+    color: blanchedalmond;
+}
+
+.col-1 
+{
+    width: 8.33%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+
+.col-2 
+{
+    /*margin-left: 0;
+    margin-right: 0;
+    display: inline-block;*/
+    float: left;
+    width: 16.67%;
+    /*font-size: 14px;
+    width: 100px;
+    width: 100em;
+    width: 100rem;*/
+    
+
+}
+.col-3 
+{
+    width: 25%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+.col-4 
+{
+    width: 33.33%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+.col-5 
+{
+    width: 41.67%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+.col-6 
+{
+    width: 50%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+.col-7 
+{
+    width: 58.33%;
+   /* width: 100px;
+    width: 100em;
+    width: 100rem;*/
+
+}
+.col-8 
+{
+    width: 66.67%;
+   /* width: 100em;
+    width: 100rem;*/
+
+}
+.col-9 
+{
+    /*margin-left: 0;
+    margin-right: 0;
+    display: inline-block;*/
+    width: 75%;
+   /* width: 100em;
+    width: 100rem;*/
+
+}
+.col-10 
+{
+    /*margin-left: 0;
+    margin-right: 0;
+    display: inline-block;
+    font-size: 14px;*/
+    float: left;
+    width: 83.33%;
+
+}
+.col-11 
+{
+    width: 91.67%;
+}
+.col-12 
+{
+    width: 100%;
+}
+
+.clear
+{
+    clear: both;
+}
+
+.clearfix::after
+{
+    display: table;
+    clear: both;
+    content: "";
+}
