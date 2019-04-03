@@ -23,7 +23,7 @@
 
             <nav class = "navbar navbar-light bg-light">
 
-                <span><a href ="home.html">Home</a></span>
+                <span><a href ="index.html">Home</a></span>
                 <span><a href ="login.html">Sign In</a></span>
                 <span><a href ="hours.html">Hours</a></span>
                 <span><a href ="order.html">Gimme Pizza!</a></span>
@@ -35,8 +35,8 @@
         <main>
 
             <h1>Order Up!</h1>
-
-            <label for ="amount">Choose number of pizzas:</label>
+ 
+            <!-- <label for ="amount">Choose number of pizzas:</label>
             <input list = "number-of-pizzas" id = "amount" name = "amount" />
 
             <datalist id = "number-of-pizzas">
@@ -46,33 +46,34 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
 
-            </datalist>
+            </datalist>   -->
 
-            <p>Choose pie size:</p>
+            <img src="/img/3553395490_7557204030_z.jpg" alt="pepperoni pizza" />
+            <img src="/img/8175276708_a5b4ef6b49_b.jpg" alt="cheese pizza" />
+            <img src="/img/26679384893_541a685988_b.jpg" alt="onion pizza" />
 
-            <div class = "pieSize">
+            <form action = "" method="POST"> 
+                <label for="crust">Crust:</label>
+                <select name ="crust" id= "crust">
+                    <option value = "standard">Standard</option>
+                    <option value = "sicilian">Sicilian</option>
+                    <option value = "neopolitan">Neopolitan</option>
+                    <option value = "deepdish">Deep Dish</option>
+                    <option value = "nystyle">New York Style</option>
+                </select>
+
                
-                <input type = "radio" id = "small" name = "size" value = "small" checked>
+                <input type = "radio" id = "small" name = "size" value = "small">
                 
                 <label for "small">Small</label>
-
-           </div>
-
-           <div class = "pieSize">
                
                 <input type = "radio" id = "medium" name = "size" value = "medium">
                 
                 <label for "medium">Medium</label>
-
-           </div>
-
-           <div class = "pieSize">
                
                 <input type = "radio" id = "large" name = "size" value = "large">
                 
                 <label for "large">Large</label>
-
-           </div>
 
            <p>Choose Toppings:</p>
 
@@ -82,14 +83,14 @@
             
                 <div class = "col">
 
-                <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
+                <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce" value ="tomatosauce">
                 <label for "tomatoSauce">Tomato Sauce</label>
 
                 </div>
 
            <div class = "col">
 
-            <input type = "checkbox" id = "whiteSauce" name = "white sauce">
+            <input type = "checkbox" id = "whiteSauce" name = "toppings"value ="alfredo">
             <label for "whiteSauce">Alfredo Sauce</label>
     
            </div>
@@ -97,14 +98,14 @@
            <div class = "w-100"></div>
 
            <div class = "col">
-            <input type = "checkbox" id = "greenSauce" name = "green sauce">
+            <input type = "checkbox" id = "greenSauce" name = "toppings" value ="pesto">
             <label for "greenSauce">Pesto Sauce</label>
 
            </div>
 
            <div class = "col">
 
-            <input type = "checkbox" id = "bbqSauce" name = "bbq sauce">
+            <input type = "checkbox" id = "bbqSauce" name = "toppings"value ="bbq">
             <label for "bbqSauce">Barbecue Sauce</label>
     
             </div>
@@ -113,14 +114,14 @@
             
             <div class = "col">
 
-            <input type = "checkbox" id = "cheese" name = "cheese">
+            <input type = "checkbox" id = "cheese" name = "toppings" value ="cheese">
             <label for "cheese">Cheese</label>
         
             </div>
                    
             <div class = "col">
 
-            <input type = "checkbox" id = "pepperoni" name = "pepperoni">
+            <input type = "checkbox" id = "pepperoni" name = "toppings" value ="pepperoni">
             <label for "pepperroni">Pepperoni</label>
             
             </div>
@@ -129,15 +130,15 @@
                        
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "sausage" name = "toppings" value ="sausage">
+            <label for "sausage">Sasuage</label>
                 
             </div>
                            
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "mushroom" name = "toppings" value ="mushroom">
+            <label for "mushroom">Mushrooms</label>
                     
             </div>
 
@@ -145,30 +146,30 @@
                                
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "pepper" name = "toppings" value ="pepper">
+            <label for "pepper">Peppers</label>
                         
             </div>
                                     
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "spinach" name = "toppings" value ="spinach">
+            <label for "spinach">Spinach</label>
                             
             </div>
             <div class = "w-100"></div>
                                
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "onion" name = "toppings" value ="onion">
+            <label for "onion">Onions</label>
                         
             </div>
                                     
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "broccoli" name = "toppings" value ="broccoli">
+            <label for "broccoli">Broccoli</label>
                             
             </div>
             
@@ -176,24 +177,39 @@
                                
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
+            <input type = "checkbox" id = "chicken" name = "toppings" value ="chicken">
+            <label for "chicken">Chicken</label>
                         
             </div>
                                     
             <div class = "col">
 
-            <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce">
-            <label for "tomatoSauce">Tomato Sauce</label>
-                            
+            <input type = "checkbox" id = "bacon" name = "toppings" value ="bacon">
+            <label for "bacon">Bacon</label>
+
             </div>
+
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+            <input type = "checkbox" id = "pineapple" name = "toppings" value ="pineapple">
+            <label for "pineapple">Pineapple</label>
+            </div>                   
+            
+            <div class = "col">
+            <input type = "checkbox" id = "ham" name = "toppings" value ="ham">
+            <label for "ham">Ham</label>
+            </div>               
+          
 
          </div>
         </div>
 
-        <button class = "orderFinish" type = "button">
-                Order
-            </button>
+        <button type="button" id = "placeOrder">Order</button>
+
+    </form>
+
+        
 
         </main>
 

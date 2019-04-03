@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>log in</title>
+    <title>pie time</title>
+
+
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,7 +21,7 @@
 
                 <nav class = "navbar navbar-light bg-light">
 
-                    <span><a href ="home.html">Home</a></span>
+                    <span><a href ="index.html">Home</a></span>
                     <span><a href ="login.html">Sign In</a></span>
                     <span><a href ="hours.html">Hours</a></span>
                     <span><a href ="order.html">Gimme Pizza!</a></span>
@@ -30,6 +32,45 @@
 
         <main>
 
+            <header class = "row">
+
+                <h2>Sign In</h2>
+
+            </header>
+
+           <form action="" method ="GET" class = "logIn">
+
+            <div class = "logIn">
+
+                <label for = "user" id = "user" required>Username:</label>
+                <input type ="text" name = "user" id = "user" required>
+            
+            </div>
+
+            <div class = "logIn">
+
+                    <label for = "pass" id = "pass" required>Password:</label>
+                    <input type ="password" name = "pass" id = "pass" required>
+                
+                </div>
+
+                <div class = "logIn">
+
+                        <label for = "address" id = "address" required>Input Address:</label>
+                        <input type ="text" name = "address" id = "address" required>
+                    
+                    </div>
+
+                <div class = "logIn">
+
+                    <input type ="submit" value = "Sign In">
+                        
+                    </div>
+            
+           </form>
+
+            <large></large>
+
 
         </main>
 
@@ -37,6 +78,8 @@
 
         </footer>
     </div>
+
+    <script src = "js/app.js" type ="module"></script>
 </body>
 
 </html>
