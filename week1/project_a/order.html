@@ -48,13 +48,17 @@
 
             </datalist>   -->
 
-            <img src="/img/3553395490_7557204030_z.jpg" alt="pepperoni pizza" />
-            <img src="/img/8175276708_a5b4ef6b49_b.jpg" alt="cheese pizza" />
-            <img src="/img/26679384893_541a685988_b.jpg" alt="onion pizza" />
+            <!-- <p>Previous Orders:</p>
+            <div class = "orders">
+            <img src="img/3553395490_7557204030_z.jpg" alt="pepperoni pizza" width = 150 height = 100/>
+            <img src="img/8175276708_a5b4ef6b49_b.jpg" alt="cheese pizza" width = 150 height = 100/>
+            <img src="img/26679384893_541a685988_b.jpg" alt="onion pizza" width = 150 height = 100/>
+            </div> -->
 
             <form action = "" method="POST"> 
                 <label for="crust">Crust:</label>
                 <select name ="crust" id= "crust">
+                    <option value = "none">&nbsp;</option>
                     <option value = "standard">Standard</option>
                     <option value = "sicilian">Sicilian</option>
                     <option value = "neopolitan">Neopolitan</option>
@@ -83,14 +87,14 @@
             
                 <div class = "col">
 
-                <input type = "checkbox" id = "tomatoSauce" name = "tomato sauce" value ="tomatosauce">
+                <input type = "checkbox" id = "tomatosauce" name = "toppings" value ="tomatosauce">
                 <label for "tomatoSauce">Tomato Sauce</label>
 
                 </div>
 
            <div class = "col">
 
-            <input type = "checkbox" id = "whiteSauce" name = "toppings"value ="alfredo">
+            <input type = "checkbox" id = "alfredo" name = "toppings"value ="alfredo">
             <label for "whiteSauce">Alfredo Sauce</label>
     
            </div>
@@ -98,14 +102,14 @@
            <div class = "w-100"></div>
 
            <div class = "col">
-            <input type = "checkbox" id = "greenSauce" name = "toppings" value ="pesto">
+            <input type = "checkbox" id = "pesto" name = "toppings" value ="pesto">
             <label for "greenSauce">Pesto Sauce</label>
 
            </div>
 
            <div class = "col">
 
-            <input type = "checkbox" id = "bbqSauce" name = "toppings"value ="bbq">
+            <input type = "checkbox" id = "bbq" name = "toppings"value ="bbq">
             <label for "bbqSauce">Barbecue Sauce</label>
     
             </div>
@@ -205,11 +209,19 @@
          </div>
         </div>
 
-        <button type="button" id = "placeOrder">Order</button>
+        <button type="button" id = "addPizza">Add Pizza</button>
 
     </form>
 
-        
+        <section>
+
+            <h2>Your Order:</h2>
+
+            <ul id="orderCart"></ul>
+
+            <button type="button" id = placeOrder>Place Order</button>
+
+        </section>
 
         </main>
 

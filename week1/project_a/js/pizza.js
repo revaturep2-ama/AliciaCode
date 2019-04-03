@@ -1,11 +1,30 @@
 import {Size} from "./size.js";
 
-function Pizza ()
+let pizzaSizes = [
+    new Size('small', 5),
+    new Size('medium', 10),
+    new Size('large', 15)
+];
+
+function Pizza (c, s, t)
 {
     this.id = null;
-    this.crust = null;
-    this.size = new Size();
-    this.toppings = [];
+    this.crust = c;
+    this.size = getSize(s);
+    this.toppings = t;
+}
+
+function getSize (s)
+{
+
+    for (let i = 0; i < pizzaSizes.length; i += 1)
+    {
+        if (pizzaSizes[i].name.toLowerCase() == s.toLowerCase()) 
+        {
+            return pizzaSizes[i];
+        }
+    }
+
 }
 
 export {Pizza};

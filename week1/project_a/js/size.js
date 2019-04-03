@@ -1,8 +1,8 @@
-function Size()
+function Size(n, p)
 {
     this.id = null;
-    this.name = null;
-    this.price = null;
+    this.name = n;
+    this.price = p;
 }
 
 export { Size};

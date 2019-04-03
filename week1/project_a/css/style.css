@@ -34,3 +34,10 @@
          color: wheat;
 
      }
+     
+     div.orders
+     {
+         line-break: auto;
+
+         columns: 2;
+     }
