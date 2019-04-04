@@ -25,7 +25,6 @@
 
                 <span><a href ="index.html">Home</a></span>
                 <span><a href ="login.html">Sign In</a></span>
-                <span><a href ="hours.html">Hours</a></span>
                 <span><a href ="order.html">Gimme Pizza!</a></span>
 
             </nav>
@@ -35,18 +34,6 @@
         <main>
 
             <h1>Order Up!</h1>
- 
-            <!-- <label for ="amount">Choose number of pizzas:</label>
-            <input list = "number-of-pizzas" id = "amount" name = "amount" />
-
-            <datalist id = "number-of-pizzas">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-
-            </datalist>   -->
 
             <!-- <p>Previous Orders:</p>
             <div class = "orders">
@@ -56,6 +43,26 @@
             </div> -->
 
             <form action = "" method="POST"> 
+
+                <label for="user">Choose User:</label>
+                <select name = "user" id = "user">
+                    <option value="none">&nbsp;</option>
+                    <option value="user1">User 1</option>
+                    <option value="user2">User 2</option>
+                    <option value="user3">User 3</option>
+                    <option value="user4">User 4</option>
+                    <option value="user5">User 5</option>
+
+                </select>
+
+            <label for="store">Choose Store:</label>
+            <select name="store" id="store">
+            <option value="none">&nbsp;</option>
+            <option value="scooper">S Cooper St</option>
+            <option value="ncooper">N Cooper St</option>
+            <option value="curry">Curry Rd</option>
+            </select>
+
                 <label for="crust">Crust:</label>
                 <select name ="crust" id= "crust">
                     <option value = "none">&nbsp;</option>
@@ -218,6 +225,7 @@
             <h2>Your Order:</h2>
 
             <ul id="orderCart"></ul>
+
 
             <button type="button" id = placeOrder>Place Order</button>
 

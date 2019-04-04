@@ -1,10 +1,12 @@
-import {Location} from "./location.js";
-import {User} from "./user.js";
+import {storeLocationCollection} from "./storelocation.js";
+import {userCollection} from "./user.js";
 import { Pizza } from "./pizza.js";
 import { Order } from "./order.js";
 
 function validatePizza()
 {
+    let userCollection = document.querySelector('select[name="user"]');
+    let storeCollection = document.querySelector('select[name = "store"]');
     let crustCollection = document.querySelector('select[name="crust"]');
     let sizeCollection = document.querySelectorAll('input[name="size"]');
     let toppingCollection = document.querySelectorAll('input[name="toppings"]');
@@ -78,8 +80,25 @@ function createOrder ()
     let order = new Order();
 
     order.pizzas = pizzas;
-    console.log(order.cost());
+
+    attachLocation(sl, order);
+    attachUser(us, order);
 }
+
+function attachLocation(sl, o)
+{
+    let location = new storeLocationCollection[sl];
+
+    storeLocationCollection.orders.push(o);
+}
+
+function attachUser (u, o)
+{
+    let user = new User();
+
+    user.orders.push(o);
+}
+
 
 let pizzas = [];
 let addPizza = document.querySelector('#addPizza');

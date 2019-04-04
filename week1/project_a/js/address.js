@@ -6,6 +6,7 @@ function Address()
     this.state = null;
     this.zipcode = null;
 
+    
 }
 
 export {Address};
