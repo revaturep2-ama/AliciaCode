@@ -26,7 +26,9 @@ entryCount(regexChar, txt)
 {
     if (regexChar.test(txt) = true){
         
-        char.push(txt);
+        c = /[a-z]/;
+
+        char.push(c);
 
         return (console.log('char pushed'));
     };
