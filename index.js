@@ -17,7 +17,7 @@ Life is what happens to us while we are making other plans. \
 A woman is like a tea bag; you never know how strong it is until it's in hot water. \
 Love all, trust a few, do wrong to none.";
 
-let char = [], word = [];
+let char = null, word = null, count = [];
 
 let entry = txtCount();
 let regexChar = /[a-z]/;
@@ -43,7 +43,7 @@ txtCount(regexChar, regexWord, txt)
         };
         
 
-        char.push(c);
+        count.push(c);
 
         return (console.log('char pushed'));
     };
@@ -66,7 +66,7 @@ txtCount(regexChar, regexWord, txt)
         };
         
 
-        word.push(w);
+        count.push(w);
 
         return (console.log('word pushed'));
     };
