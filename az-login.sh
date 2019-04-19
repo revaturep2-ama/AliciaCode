@@ -3,8 +3,8 @@
 username=$1
 passcode=$2
 userdisplayname=$3
-userprincipalname=[$userdisplayname@$DOMAIN]
-DOMAIN=$'alicialeblanc0gmail.onmicrosoft.com
+userprincipalname=$userdisplayname$DOMAIN
+DOMAIN=$'@alicialeblanc0gmail.onmicrosoft.com
 random=$(date +%-M)
 usersubscription=$4
 
