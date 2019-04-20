@@ -41,47 +41,51 @@ if [ -e /home/linuxbrew/.linuxbrew/bin/node ]; then
 echo "node set"
 echo "making project structure"
 
-dir=$2
+dir=$1
 
-mkdir /$dir/.docker
+mkdir $dir
 
-touch \
-  /$dir/.docker/dockerfile \
-  /$dir/.docker/dockerup.yaml
+mkdir ./$dir/.docker
+
+touch ./$dir/.docker/dockerfile 
+touch ./$dir/.docker/dockerup.yaml
 
 ## github
-mkdir -p \
-  /$dir/.github/ISSUE_TEMPLATE \
-  /$dir/.github/PULL_REQUEST_TEMPLATE
+mkdir ./$dir/.github
 
-touch \
-  /$dir/.github/ISSUE_TEMPLATE/issue-template.md \
-  /$dir/.github/PULL_REQUEST_TEMPLATE/pull-request-template.md
+mkdir ./$dir/.github/ISSUE_TEMPLATE
 
-touch \
-  /$dir/.github/CODE-OF-CONDUCT.md \
-  /$dir/.github/CONTRIBUTING.md
+mkdir ./$dir/.github/PULL_REQUEST_TEMPLATE
+
+touch ./$dir/.github/ISSUE_TEMPLATE/issue-template.md 
+
+touch ./$dir/.github/PULL_REQUEST_TEMPLATE/pull-request-template.md
+
+touch ./$dir/.github/CODE-OF-CONDUCT.md 
+
+touch ./$dir/.github/CONTRIBUTING.md
 
 ## root
-mkdir \
- /$dir/client \
- /$dir/src \
- /$dir/test
+mkdir ./$dir/client
 
-touch \
-  /$dir/client/.gitkeep \
-  /$dir/src/.gitkeep \
-  /$dir/test/.gitkeep
+mkdir ./$dir/src
 
-touch \
-  /$dir/.azureup.yaml \
-  /$dir/.dockerignore \
-  /$dir/.editorconfig \
-  /$dir/.gitignore \
-  /$dir/.markdownlint.yaml \
-  /$dir/CHANGELOG.md \
-  /$dir/LICENSE.txt \
-  /$dir/README.md
+mkdir ./$dir/test
+
+touch./$dir/client/.gitkeep
+
+touch ./$dir/src/.gitkeep
+
+touch ./$dir/test/.gitkeep
+
+touch ./$dir/.azureup.yaml 
+touch ./$dir/.dockerignore 
+touch ./$dir/.editorconfig 
+touch ./$dir/.gitignore 
+touch ./$dir/.markdownlint.yaml 
+touch ./$dir/CHANGELOG.md 
+touch ./$dir/LICENSE.txt 
+touch ./$dir/README.md
   
   else echo "no node"
   
