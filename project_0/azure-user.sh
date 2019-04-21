@@ -8,24 +8,26 @@ DOMAIN=$'@'alicialeblanc0gmail.onmicrosoft.com
 random=$(date +%-M)
 usersubscription=$4
 
-function create_user
+##functions
+
+create_user()
 {
   echo "henlo baby"
 }
 
-function assign_role
+assign_role()
 {
   echo "fresh roles here"
 }
 
-function delete_user
+delete_user()
 {
   echo "hasta la vista, loser"
 }
 
-create_user()
-assign_role()
-delete_user()
+create_user
+##assign_role
+##delete_user
 
 ##az login -u $username -p $passcode
 
