@@ -3,16 +3,17 @@
 username=$1
 passcode=$2
 userdisplayname=$3
-userprincipalname=[$userdisplayname]$DOMAIN
 DOMAIN=$'@'alicialeblanc0gmail.onmicrosoft.com
-random=$(date +%-M)
+userprincipalname=$userdisplayname$DOMAIN
+random=$(date +"%-M:%-S_%-p")
 usersubscription=$4
 
 ##functions
 
 create_user()
 {
-  echo "henlo baby"
+  az login -u $username -p $passcode
+  az ad user create --user-display-name $userdisplayname --password $random --user-principal-name $userprincipalname --force-change-password-next-login --subscription $usersubscription 
 }
 
 assign_role()
