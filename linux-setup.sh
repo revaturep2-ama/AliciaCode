@@ -1,10 +1,12 @@
 #!/bin/bash
 
-##update apt
+##update apt ubuntu
 
-sudo apt full-upgrade -y
+apt full-upgrade -qy
 
-##install Debian/Ubuntu Brew
+echo "completed ubuntu update"
+
+##install Brew
 
 sudo apt-get install build-essential curl file git
 
@@ -16,11 +18,13 @@ brew install gcc
 
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>/.profile
 
+echo "completed brew section"
+
 ##install git, az-cli and node
 
 brew install git
 brew install azure-cli
 brew install node
 
-echo "newenviro finished"
+echo "linux-setup finished"
 

@@ -2,46 +2,23 @@
 
 ##check if script 1 is successful
 
-##check for brew
+##check for git and node
 
-if [ -e /usr/bin/brew ]; then
-
-echo "brew set"
-
-else echo "no brew"
-
+if ! [ -e /usr/bin/git ]&& if ! [ -e /home/linuxbrew/.linuxbrew/bin/node ]; then
+exit 1; echo "no git or node"
 fi
 
-##check for az-cli
-
-if [ -e /home/linuxbrew/.linuxbrew/bin/az ]; then
-
-echo "az set"
-
-else echo "no az"
-
-fi
-
-##check for git
-
-if [ -e /usr/bin/git ]; then
-
-echo "git set"
-
-git init
-
-else echo "no git"
-
-fi
-
-##check for node
-
-if [ -e /home/linuxbrew/.linuxbrew/bin/node ]; then
-
-echo "node set"
+echo "node and git set"
 echo "making project structure"
 
-dir=$1
+parentdir=$1
+dir=$2
+
+if [ -d -n $dir] && ! [ -force ]; then
+exit 1; echo "directory is not empty"
+fi
+
+cd $parentdir
 
 mkdir $dir
 
@@ -95,8 +72,10 @@ touch ./$dir/LICENSE.txt
 
 touch ./$dir/README.md
 
-else echo "no node"
+git config
+git config
+git init
 
-fi
+npm 
 
 echo "enviroment check and project setup complete"
