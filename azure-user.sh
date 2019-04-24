@@ -1,5 +1,5 @@
 #!/bin/bash
-command = $2
+command=$2
 userdisplayname=$3
 DOMAIN=$'@alicialeblanc0gmail.onmicrosoft.com'
 userprincipalname=$userdisplayname$DOMAIN
@@ -16,9 +16,7 @@ fi
 
 case $command in
 create ) create_user()
-;;
 assign ) assign_role()
-;;
 remove ) delete_user()
 esac
 
@@ -45,22 +43,29 @@ assign_role($username, $role)
 	fi
 
 	##if user has the role, remove it
-	if [ az 
+	if [ $(az role assignment list --query  roleDefinitionName | grep -E $role) ]; then
+	az role assignment delete --role $role
 
 	##if user does not have the role, assign  it (if/else)
-
-	
+	else if ! [ $(az role assignment list --query  roleDefinitionName | grep -E $role) ]; then
+	az role assignment create --role $role
+	fi
 }
 
 delete_user( )
 {
 	##delete non-admin user
-	echo "hasta la vista, loser"
+	
+	##check for admin
+	if [ $(az role assignment list --include-classic-administrators --query "[?id=='NA(classic admins)'].principalName | grep -E $userprincipalname) ]; then
+	echo "you cannot delete an admin"
+	exit 1;
+	fi
+	
+	if ! [ $(az role assignment list --include-classic-administrators --query "[?id=='NA(classic admins)'].principalName | grep -E $userprincipalname) ]; then
+	az ad user delete --upn-or-object-id $userprincipalname
+	fi
 }
-
-create_user
-assign_role
-delete_user
 
 
 
