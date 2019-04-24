@@ -13,6 +13,8 @@ echo "making project structure"
 
 parentdir=$1
 dir=$2
+username=$3
+useremail=$4
 
 if [ -d -n $dir]; then
 exit 1; echo "directory is not empty"
@@ -72,8 +74,8 @@ touch ./$dir/LICENSE.txt
 
 touch ./$dir/README.md
 
-git config
-git config
+git config --global user.name $username
+git config --global user.email $useremail
 git init
 
 npm 
