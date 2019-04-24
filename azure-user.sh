@@ -1,10 +1,10 @@
 #!/bin/bash
-command = $1
-userdisplayname=$2
+command = $2
+userdisplayname=$3
 DOMAIN=$'@alicialeblanc0gmail.onmicrosoft.com'
 userprincipalname=$userdisplayname$DOMAIN
 random=$(date +"%-M:%-S_%-p")
-usersubscription=$3
+usersubscription=$4
 currentuser=$(az account show --query user.name)
 
 ##verify az-cli
@@ -16,7 +16,9 @@ fi
 
 case $command in
 create ) create_user()
+;;
 assign ) assign_role()
+;;
 remove ) delete_user()
 esac
 
@@ -35,6 +37,7 @@ create_user()
 
 assign_role($username, $role)
 {
+	role=$5
 	##verify user exists
 	if ! [ $(az ad user list --query [].userPrincipalName) | grep -E $userprincipalname) ]; then
 	echo "this user doesnt exist"
@@ -42,16 +45,11 @@ assign_role($username, $role)
 	fi
 
 	##if user has the role, remove it
-	
+	if [ az 
 
 	##if user does not have the role, assign  it (if/else)
 
-	echo "yes/no"
-	case read answer
-	yes ) remove role commands;
-	esac
-
-	echo "fresh roles here"
+	
 }
 
 delete_user( )
