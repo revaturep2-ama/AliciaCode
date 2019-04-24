@@ -14,10 +14,10 @@ fi
 
 ##commands
 
-case $command
-create ) create_user();;
-assign ) assign_role();;
-remove ) delete_user();;
+case $command in
+create ) create_user()
+assign ) assign_role()
+remove ) delete_user()
 esac
 
 ##functions
@@ -25,7 +25,7 @@ esac
 create_user()
 {
 	
-	if [ $(az role assignment list --include-classic-administrators --query "[?id=='NA(classic admins)'].principalName | grep -E $currentUser ] && [ az ad user list --query [].userPrincipalName | grep -E != $userprincipalname ]; then
+	if [ $(az role assignment list --include-classic-administrators --query "[?id=='NA(classic admins)'].principalName | grep -E $currentUser ] && [ $(az ad user list --query [].userPrincipalName) | grep -E != $userprincipalname ]; then
 	az ad user create --display-name $userdisplayname --password $random --user-principal-name $userprincipalname --force-change-password-next-login --subscription $usersubscription
 	
 	else echo "You need to be an administrator to create users"
@@ -36,7 +36,14 @@ create_user()
 assign_role($username, $role)
 {
 	##verify user exists
+	if ! [ $(az ad user list --query [].userPrincipalName) | grep -E $userprincipalname) ]; then
+	echo "this user doesnt exist"
+	exit 1
+	fi
+
 	##if user has the role, remove it
+	
+
 	##if user does not have the role, assign  it (if/else)
 
 	echo "yes/no"
