@@ -76,8 +76,10 @@ touch ./$dir/README.md
 
 git config --global user.name $username
 git config --global user.email $useremail
-git init
+cd $parentdir/
+git init 
 
-npm 
+npm install
 
 echo "enviroment check and project setup complete"
+exit 0
