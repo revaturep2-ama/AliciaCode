@@ -12,14 +12,6 @@ if ! [ $(which az) ]; then
 exit 1; echo "no azure"
 fi
 
-##commands
-
-case $command in
-create ) create_user()
-assign ) assign_role()
-remove ) delete_user()
-esac
-
 ##functions
 
 create_user()
@@ -33,7 +25,7 @@ create_user()
 	fi
 }
 
-assign_role($username, $role)
+assign_role()
 {
 	role=$5
 	##verify user exists
@@ -52,7 +44,7 @@ assign_role($username, $role)
 	fi
 }
 
-delete_user( )
+delete_user()
 {
 	##delete non-admin user
 	
@@ -67,9 +59,10 @@ delete_user( )
 	fi
 }
 
-
-
-echo 'azure-user complete'
-exit 0
-
-
+case $command in
+create ) create_user()
+;;
+assign ) assign_role()
+;;
+remove ) delete_user()
+esac
