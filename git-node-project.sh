@@ -14,7 +14,7 @@ echo "making project structure"
 parentdir=$1
 dir=$2
 
-if [ -d -n $dir] && ! [ -force ]; then
+if [ -d -n $dir]; then
 exit 1; echo "directory is not empty"
 fi
 
