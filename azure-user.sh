@@ -5,18 +5,19 @@ DOMAIN=$'@alicialeblanc0gmail.onmicrosoft.com'
 userprincipalname=$userdisplayname$DOMAIN
 random=$(date +"%-M:%-S_%-p")
 usersubscription=$3
+currentuser=$(az account show --query user.name)
 
 ##verify az-cli
-if ! [az exists ]; then
-exit 1
+if ! [ $(which az) ]; then
+exit 1; echo "no azure"
 fi
 
 ##commands
 
 case $command
-create ) create_user();
-assign ) assign_role();
-remove ) delete_user();
+create ) create_user();;
+assign ) assign_role();;
+remove ) delete_user();;
 esac
 
 ##functions
@@ -24,7 +25,7 @@ esac
 create_user()
 {
 	
-	if [   ] && [ $userprincipalname != [].userprincipalname  ]; then
+	if [ $(az role assignment list --include-classic-administrators --query "[?id=='NA(classic admins)'].principalName | grep -E $currentUser ] && [ az ad user list --query [].userPrincipalName | grep -E != $userprincipalname ]; then
 	az ad user create --display-name $userdisplayname --password $random --user-principal-name $userprincipalname --force-change-password-next-login --subscription $usersubscription
 	
 	else echo "You need to be an administrator to create users"
