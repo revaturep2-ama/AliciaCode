@@ -65,4 +65,7 @@ create ) create_user()
 assign ) assign_role()
 ;;
 remove ) delete_user()
+;;
 esac
+
+exit 0
