@@ -16,8 +16,8 @@ write_files:'=
       content: |
         const http = require('http');
         let express = require('express');
-        let user = require('./user.js')
-
+        let user = require('./user.js');
+        bodyParser = require('body-parser');
         let app = express();
 
         const hostname = '0.0.0.0';
@@ -35,7 +35,7 @@ write_files:'=
   - owner: alicia:alicia
     path: /home/alicia/user.js
     content: |
-      let data = document()
+      let data = document.querySelector(id='#txtbox');
 
       function charCount(data) {
       if (data) {
@@ -98,7 +98,7 @@ write_files:'=
       </main>
 
    
-
+      <script = "./index.js"></script>
       </body>
       </html>
       
