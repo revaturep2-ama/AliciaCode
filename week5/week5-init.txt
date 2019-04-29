@@ -1,0 +1,57 @@
+#cloud-config
+
+package_update: true
+packages:
+    - build-essential
+    - curl
+    - file
+    - git
+    - nodejs
+    - npm
+    - express
+
+write_files:'=
+    - owner: alicia:alicia
+      path: home/alicia/index.js
+      content: |
+        const http = require('http');
+
+        const hostname = '0.0.0.0';
+        const port = 8080;
+
+        const server = http.createServer((req, res) => {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        res.end('<h1>Word, Character, Spaces Counter</h1>');
+        });
+
+        server.listen(port, hostname, () => {
+        console.log(`Server running at http://${hostname}:${port}/`);
+        });
+
+    - owner: alicia:alicia
+      path: /home/alicia/user.js
+      content: |
+        function charCount(data) {
+        if (data) {
+        return data.split('').length;
+        }
+
+        return 0;
+        }
+
+        function wordCount(data) {
+        if (data) {
+        return data.split(' ').length;
+        }
+
+    return 0;
+  }
+
+  let text = process.argv[2];
+
+  console.log(charCount(text));
+  console.log(wordCount(text));
+
+runcmd:
+    - cd 
