@@ -15,43 +15,87 @@ write_files:'=
       path: home/alicia/index.js
       content: |
         const http = require('http');
+        let express = require('express');
+
+        let app = express();
 
         const hostname = '0.0.0.0';
         const port = 8080;
 
         const server = http.createServer((req, res) => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html');
-        res.end('<h1>Word, Character, Spaces Counter</h1>');
+
         });
 
         server.listen(port, hostname, () => {
         console.log(`Server running at http://${hostname}:${port}/`);
         });
 
-    - owner: alicia:alicia
-      path: /home/alicia/user.js
-      content: |
-        function charCount(data) {
-        if (data) {
-        return data.split('').length;
-        }
+  - owner: alicia:alicia
+    path: /home/alicia/user.js
+    content: |
+      let data = ()
 
-        return 0;
-        }
+      function charCount(data) {
+      if (data) {
+      return data.split('').length;
+      }
 
-        function wordCount(data) {
+      return 0;
+      }
+      
+      function wordCount(data) {
         if (data) {
         return data.split(' ').length;
         }
 
-    return 0;
-  }
+        return 0;
+      }
 
-  let text = process.argv[2];
 
-  console.log(charCount(text));
-  console.log(wordCount(text));
 
+      let text = process.argv[2];
+
+      console.log(charCount(text));
+      console.log(wordCount(text));
+
+  - owner: alicia:alicia
+    path: /home/alicia/script.sh 
+    content: |
+
+      #!/bin/bash 
+      while read text
+        do
+        node index.js "$text"
+      done
+  - owner: alicia:alicia
+    path: /home/alicia/index.html
+    content: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+      <meta charset="utf-8">
+
+      <title>Text Count</title>
+
+      </head>
+
+      <body>
+
+      <header>
+      <h1>Word, Character and Spaces Count</h1>
+      </header>
+
+    
+      <main>
+
+
+      </main>
+
+   
+
+      </body>
+      </html>
+      
 runcmd:
     - cd 
