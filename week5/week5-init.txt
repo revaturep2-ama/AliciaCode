@@ -35,30 +35,44 @@ write_files:'=
   - owner: alicia:alicia
     path: /home/alicia/user.js
     content: |
-      let data = document.querySelector(id='#txtbox');
+      let data = document.querySelector('id=#txtbox');
+      let button = document.querySelector('id=#counter')
 
-      function charCount(data) {
-      if (data) {
-      return data.split('').length;
-      }
-
-      return 0;
-      }
+      function Count (){
       
-      function wordCount(data) {
+        function charCount(data) {
+        if (data) {
+        return data.split('').length;
+        }
+
+        return data.split;
+        }
+      
+        function wordCount(data) {
         if (data) {
         return data.split(' ').length;
         }
 
-        return 0;
+        return data.split;
+        }
+
+        function spaceCount(data) {
+        if (data) {
+          return data.split().length;
+        }
+
+        return data.split;
+        }
+
+        console.log(charCount(text));
+        console.log(wordCount(text));
+        console.log(spaceCount(text));
       }
 
+      addEventListener('click', Count)
 
 
-      let text = process.argv[2];
-
-      console.log(charCount(text));
-      console.log(wordCount(text));
+      module.exports = Count;
 
   - owner: alicia:alicia
     path: /home/alicia/script.sh 
@@ -84,7 +98,7 @@ write_files:'=
       <body>
 
       <header>
-      <h1>Word, Character and Spaces Count</h1>
+      <h1>Word, Character and Spaces Counter</h1>
       </header>
 
     
@@ -93,6 +107,7 @@ write_files:'=
           <label for= "count"> Enter your text:</label>
           <input type= "text" name= "count" id = "count" required>
 
+          <button type = "submit" id = "counter">Count</button>
         </form>
 
       </main>
