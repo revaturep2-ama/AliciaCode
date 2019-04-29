@@ -1,2 +1,13 @@
 #cloud-config
 
+#update packages
+#packages: node, express, etc
+
+#write files? 
+
+#run server/copy files
+
+#other scripts to set up machine?
+
+
+
