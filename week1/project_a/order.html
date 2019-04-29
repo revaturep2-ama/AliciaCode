@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>pie time</title>
+
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+
+        <div class ="container-fluid">
+
+        <header class = "row">
+
+            <h1>Pie Time Pizza</h1>
+
+            <nav class = "navbar navbar-light bg-light">
+
+                <span><a href ="index.html">Home</a></span>
+                <span><a href ="login.html">Sign In</a></span>
+                <span><a href ="order.html">Gimme Pizza!</a></span>
+
+            </nav>
+
+        </header>
+
+        <main>
+
+            <h1>Order Up!</h1>
+
+            <!-- <p>Previous Orders:</p>
+            <div class = "orders">
+            <img src="img/3553395490_7557204030_z.jpg" alt="pepperoni pizza" width = 150 height = 100/>
+            <img src="img/8175276708_a5b4ef6b49_b.jpg" alt="cheese pizza" width = 150 height = 100/>
+            <img src="img/26679384893_541a685988_b.jpg" alt="onion pizza" width = 150 height = 100/>
+            </div> -->
+
+            <form action = "" method="POST"> 
+
+                <label for="user">Choose User:</label>
+                <select name = "user" id = "user">
+                    <option value="none">&nbsp;</option>
+                    <option value="user1">User 1</option>
+                    <option value="user2">User 2</option>
+                    <option value="user3">User 3</option>
+                    <option value="user4">User 4</option>
+                    <option value="user5">User 5</option>
+
+                </select>
+
+            <label for="store">Choose Store:</label>
+            <select name="store" id="store">
+            <option value="none">&nbsp;</option>
+            <option value="scooper">S Cooper St</option>
+            <option value="ncooper">N Cooper St</option>
+            <option value="curry">Curry Rd</option>
+            </select>
+
+                <label for="crust">Crust:</label>
+                <select name ="crust" id= "crust">
+                    <option value = "none">&nbsp;</option>
+                    <option value = "standard">Standard</option>
+                    <option value = "sicilian">Sicilian</option>
+                    <option value = "neopolitan">Neopolitan</option>
+                    <option value = "deepdish">Deep Dish</option>
+                    <option value = "nystyle">New York Style</option>
+                </select>
+
+               
+                <input type = "radio" id = "small" name = "size" value = "small">
+                
+                <label for "small">Small</label>
+               
+                <input type = "radio" id = "medium" name = "size" value = "medium">
+                
+                <label for "medium">Medium</label>
+               
+                <input type = "radio" id = "large" name = "size" value = "large">
+                
+                <label for "large">Large</label>
+
+           <p>Choose Toppings:</p>
+
+           <div class = "container-fluid">
+            
+            <div class = "row">
+            
+                <div class = "col">
+
+                <input type = "checkbox" id = "tomatosauce" name = "toppings" value ="tomatosauce">
+                <label for "tomatoSauce">Tomato Sauce</label>
+
+                </div>
+
+           <div class = "col">
+
+            <input type = "checkbox" id = "alfredo" name = "toppings"value ="alfredo">
+            <label for "whiteSauce">Alfredo Sauce</label>
+    
+           </div>
+
+           <div class = "w-100"></div>
+
+           <div class = "col">
+            <input type = "checkbox" id = "pesto" name = "toppings" value ="pesto">
+            <label for "greenSauce">Pesto Sauce</label>
+
+           </div>
+
+           <div class = "col">
+
+            <input type = "checkbox" id = "bbq" name = "toppings"value ="bbq">
+            <label for "bbqSauce">Barbecue Sauce</label>
+    
+            </div>
+
+            <div class = "w-100"></div>
+            
+            <div class = "col">
+
+            <input type = "checkbox" id = "cheese" name = "toppings" value ="cheese">
+            <label for "cheese">Cheese</label>
+        
+            </div>
+                   
+            <div class = "col">
+
+            <input type = "checkbox" id = "pepperoni" name = "toppings" value ="pepperoni">
+            <label for "pepperroni">Pepperoni</label>
+            
+            </div>
+
+            <div class = "w-100"></div>
+                       
+            <div class = "col">
+
+            <input type = "checkbox" id = "sausage" name = "toppings" value ="sausage">
+            <label for "sausage">Sasuage</label>
+                
+            </div>
+                           
+            <div class = "col">
+
+            <input type = "checkbox" id = "mushroom" name = "toppings" value ="mushroom">
+            <label for "mushroom">Mushrooms</label>
+                    
+            </div>
+
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "pepper" name = "toppings" value ="pepper">
+            <label for "pepper">Peppers</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "spinach" name = "toppings" value ="spinach">
+            <label for "spinach">Spinach</label>
+                            
+            </div>
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "onion" name = "toppings" value ="onion">
+            <label for "onion">Onions</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "broccoli" name = "toppings" value ="broccoli">
+            <label for "broccoli">Broccoli</label>
+                            
+            </div>
+            
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+
+            <input type = "checkbox" id = "chicken" name = "toppings" value ="chicken">
+            <label for "chicken">Chicken</label>
+                        
+            </div>
+                                    
+            <div class = "col">
+
+            <input type = "checkbox" id = "bacon" name = "toppings" value ="bacon">
+            <label for "bacon">Bacon</label>
+
+            </div>
+
+            <div class = "w-100"></div>
+                               
+            <div class = "col">
+            <input type = "checkbox" id = "pineapple" name = "toppings" value ="pineapple">
+            <label for "pineapple">Pineapple</label>
+            </div>                   
+            
+            <div class = "col">
+            <input type = "checkbox" id = "ham" name = "toppings" value ="ham">
+            <label for "ham">Ham</label>
+            </div>               
+          
+
+         </div>
+        </div>
+
+        <button type="button" id = "addPizza">Add Pizza</button>
+
+    </form>
+
+        <section>
+
+            <h2>Your Order:</h2>
+
+            <ul id="orderCart"></ul>
+
+
+            <button type="button" id = placeOrder>Place Order</button>
+
+        </section>
+
+        </main>
+
+        <footer class = "row">
+
+            <nav></nav>
+
+            <small></small>
+
+        </footer>
+
+    </div>
+
+    <script src = "js/app.js" type = "module"></script>
+
+    </body>
+
+</html>
