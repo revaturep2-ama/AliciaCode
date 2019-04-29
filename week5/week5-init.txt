@@ -16,6 +16,7 @@ write_files:'=
       content: |
         const http = require('http');
         let express = require('express');
+        let user = require('./user.js')
 
         let app = express();
 
@@ -34,7 +35,7 @@ write_files:'=
   - owner: alicia:alicia
     path: /home/alicia/user.js
     content: |
-      let data = ()
+      let data = document()
 
       function charCount(data) {
       if (data) {
@@ -88,7 +89,11 @@ write_files:'=
 
     
       <main>
+        <form action = "post", method = "get" id = "txtbox">
+          <label for= "count"> Enter your text:</label>
+          <input type= "text" name= "count" id = "count" required>
 
+        </form>
 
       </main>
 
