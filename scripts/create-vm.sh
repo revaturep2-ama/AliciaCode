@@ -22,6 +22,16 @@ size=$5
 ##create vm
 ##if [ $(az group exists -n $vm_rg)  ] && ! [ $(az vm list | grep \$vm_name\) ]; then
 echo "creating vm"
-az vm create -n $vm_name -g $vm_rg --image $os --admin-username $newadmin --size $size --generate-ssh-keys --no-wait
+az vm create \ 
+-n $vm_name \
+-g $vm_rg \
+--image $os \
+--admin-username $newadmin \
+--size $size \
+--generate-ssh-keys \
+--custom-data ./scripts/init-vm.txt \
+--no-wait
 ##fi
+
+
 
