@@ -1,5 +1,7 @@
 const http = require('http');
 const express = require('express');
+//let client = require('./client');
+
 
 let app = express();
 
@@ -13,7 +15,7 @@ const port = 8080;
 });*/
 
 app.get('/', function (req, res){
-  res.sendFile('/revature/p1/p1/app/index.html')
+  res.sendFile('/revature/p1/p1/app/index.html') //change this for app service later
 });
 
 /*server.listen(port, hostname, () => {
