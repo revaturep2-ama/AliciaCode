@@ -1,6 +1,9 @@
 const http = require('http');
+const express = require('express');
 
-const hostname = '127.0.0.1';
+//let app = express();
+
+const hostname = 'localhost'; //change to 0.0.0.0 later for azure and change package.json start
 const port = 8080;
 
 const server = http.createServer((req, res) => {
@@ -8,6 +11,10 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.end('<h1>Hello Cloud Admin<h1>');
 });
+
+/*app.get('/', function(req, res){
+  res.send('hello admin')
+})*/
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
