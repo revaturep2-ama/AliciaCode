@@ -3,7 +3,7 @@ const express = require('express');
 
 //let app = express();
 
-const hostname = 'localhost'; //change to 0.0.0.0 later for azure and change package.json start
+const hostname = 'localhost'; //change to 0.0.0.0 and package.json start later for azure
 const port = 8080;
 
 const server = http.createServer((req, res) => {
