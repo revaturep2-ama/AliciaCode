@@ -8,7 +8,7 @@ USER=sqladmin
 
 ##create server
 
-az mysql server create -g $rg -n $serverName --admin-password $PASS --admin-user $USER
+az mysql server create -g $rg -n $serverName --admin-password $PASS --admin-user $USER --sku $sku
 
 ##then create db
 
