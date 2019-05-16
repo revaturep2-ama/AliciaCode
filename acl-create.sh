@@ -10,7 +10,7 @@ echo "this resource group doesnt exist!"
 exit 1
 fi
 
-if [ $(grep \-w $sgName\ ) | $(az network nsg list) ]; then
+if [ $(grep /($sgName)/ ) | $(az network nsg list) ]; then
 echo "this security group already exists"
 exit 1
 fi
