@@ -17,9 +17,4 @@ echo "this network already exists"
 exit 1
 fi
 
-if [ $(grep /($sn)) | $(az network vnet subnet list -g $rg --vnet-name $nw) ]; then
-echo "this subnet already exists in this network"
-exit 1
-fi
-
 az network vnet create -n $nw -g $rg --address-prefix $ap --subnet-name $sn --subnet-prefix $sp 
