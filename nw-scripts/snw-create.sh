@@ -2,6 +2,11 @@
 
 #create subnets 
 
+sn=$1
+rg=$2
+nw=$3
+ap=$4
+
 if ! [ $(grep /($nw)/) | $(az network vnet list -g $rg) ]; then
 echo "this network doesnt exist"
 exit 1
