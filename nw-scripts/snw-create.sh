@@ -7,7 +7,7 @@ echo "this network doesnt exist"
 exit 1
 fi
 
-if [ $(grep /($sn)) | $(az network vnet subnet list -g $rg --vnet-name $nw) ]; then
+if [ $(grep /($sn)/) | $(az network vnet subnet list -g $rg --vnet-name $nw) ]; then
 echo "this subnet already exists in this network"
 exit 1
 fi

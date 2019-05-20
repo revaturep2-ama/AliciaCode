@@ -15,7 +15,7 @@ echo "this security group already exists"
 exit 1
 fi
 
-az network nsg create -n $sgName -g $rg
+az network nsg create -n $sgName -g $rg 
 
 
 
