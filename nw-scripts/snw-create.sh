@@ -8,7 +8,7 @@ ap=$4
 #create subnets 
 
 sn=$1
-rg=$2
+rg=$default-rg
 nw=$3
 ap=$4
 

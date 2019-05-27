@@ -2,7 +2,7 @@
 
 ##create network
 nw=$1
-rg=$2
+rg= $default-rg
 ap=$3
 sn=$4
 sp=$5

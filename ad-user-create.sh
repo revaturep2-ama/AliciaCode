@@ -9,4 +9,4 @@ pass=$2
 
   az ad user create --user-display-name $userdisplayname --password $pass --user-principal-name $userprincipalname --force-change-password-next-login
 
-az ad group add 
+az role assignment create --role reader --assignee $userprincipalname

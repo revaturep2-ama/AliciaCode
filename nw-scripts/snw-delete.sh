@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sn=$1
-rg=$2
+rg=$default-rg
 nw=$3
 
 if ! [ "$((grep /($sn)/) | $(az network vnet subnet list -g $rg --vnet-name $nw))" ]; then
