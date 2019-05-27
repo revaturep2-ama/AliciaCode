@@ -2,14 +2,14 @@
 ##create rules
 
 rule=$1
-rg=$2
-sg=$3
-access=$4
-pri=$5
-dap=$6
-dir=$7
-sap=$8
-dpr=$9
+rg=$default-rg
+sg=$2
+access=$3
+pri=$4
+dap=$5
+dir=$6
+sap=$7
+dpr=$8
 
 ##inbound and outbound
 

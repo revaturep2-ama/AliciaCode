@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##delete network
-rg=$1
+rg=$default-rg
 nw=$2
 
 if ! [ $(az group exists -n $rg) ]; then

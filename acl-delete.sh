@@ -2,7 +2,7 @@
 ##nsg delete
 
 sgName=$1
-rg=$2
+rg=$default-rg
 
 if ! [ $(az group exists -n $rg) ]; then 
 

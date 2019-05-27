@@ -3,7 +3,7 @@
 ##delete nsg rules
 rule=$1
 sg=$2
-rg=$3
+rg=$default-rg
 
 if ! [ $(grep /($rule)/ ) | $(az network nsg rule list --nsg-name $sg -g $rg) ]; then
 echo "this rule doesnt exist"
