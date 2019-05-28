@@ -3,7 +3,7 @@
 ##creating a new user
 
 userdisplayname=$1
-DOMAIN=$'@mywebapp.southcentralus.cloudapp.azure.com:1337'
+DOMAIN=$'@mywebapp.southcentralus.cloudapp.azure.com'
 userprincipalname=$userdisplayname$DOMAIN
 pass=$2
 
